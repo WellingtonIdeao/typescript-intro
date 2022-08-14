@@ -12,3 +12,6 @@ var Produto = /** @class */ (function () {
 function addNumbers(x, y) {
     return x + y;
 }
+var myAdd = function (x, y) {
+    return x + y;
+};
