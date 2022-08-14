@@ -81,3 +81,17 @@ function printLabelInterface(labelledObj) {
 }
 var myObj = { label: "label with interface" };
 printLabelInterface(myObj);
+var mySearch;
+mySearch = function (src, sub) {
+    var result = src.search(sub);
+    if (result == -1) {
+        return false;
+    }
+    else {
+        return true;
+    }
+};
+alert("interface function " + mySearch("interface function", "function"));
+var array;
+array = ['index 1', 'index2'];
+alert("interface array " + array[1]);

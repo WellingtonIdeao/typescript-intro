@@ -105,3 +105,36 @@ function printLabelInterface(labelledObj: LabelledValue){
 }
 var myObj = {label: "label with interface"};
 printLabelInterface(myObj);
+
+// interface function type
+
+interface SearchConf{
+    (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchConf;
+
+mySearch = function(src:string, sub: string): boolean {
+    let result =  src.search(sub);
+    if (result == -1){
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+alert("interface function "+mySearch("interface function","function"));
+
+// interface array type
+interface StringConf{
+    [index: number]: string;
+}
+
+let array:StringConf;
+array = ['index 1', 'index2'];
+alert("interface array "+array[1]);
+
+
+
+
