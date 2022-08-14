@@ -127,11 +127,11 @@ mySearch = function(src:string, sub: string): boolean {
 alert("interface function "+mySearch("interface function","function"));
 
 // interface array type
-interface StringConf{
+interface StringArray{
     [index: number]: string;
 }
 
-let array:StringConf;
+let array:StringArray;
 array = ['index 1', 'index2'];
 alert("interface array "+array[1]);
 
