@@ -60,3 +60,14 @@ function calcDescount(price, descount) {
     }
     return descountResult;
 }
+// arrow function
+// step 1
+var result6 = function (x, y, z) {
+    return x + y + z;
+};
+// step 2
+var result6 = function (x, y, z) {
+    return x + y + z;
+};
+// step 3
+var result6 = function (x, y, z) { return x + y + z; };

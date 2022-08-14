@@ -72,3 +72,17 @@ function calcDescount(price: number, descount?: number): any {
     return descountResult;
 }
 
+// arrow function
+
+// step 1
+var result6 = function (x: number, y: number, z: number): number{
+    return x+y+z;
+}
+
+// step 2
+var result6 = (x: number, y: number, z: number) => {
+    return x+y+z;
+}
+
+// step 3
+var result6 = (x: number, y: number, z: number) => x+y+z;
