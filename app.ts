@@ -140,5 +140,43 @@ array = ['index 1', 'index2'];
 alert("interface array "+array[1]);
 
 
+// interface class type
+
+interface ClockInterface {
+    currentTime: Date;
+    setTime(d: Date);
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    setTime(date: Date){
+        this.currentTime = date;
+    }
+    constructor(public h: number, m: number){
+
+    }
+}
+
+// interface inheritance
+
+interface Shape{
+    color: string;
+}
+interface PenStroke{
+    penWidth: number;
+}
+
+interface Square extends Shape, PenStroke{
+    sideLength: number;
+}
+
+var square = <Square>{};
+square.color ='Blue';
+square.penWidth = 5.0;
+square.sideLength = 10;
+
+alert(`${square.color} ${square.penWidth} ${square.sideLength}`);
+
+
 
 

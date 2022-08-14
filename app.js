@@ -98,3 +98,17 @@ alert("interface function " + mySearch("interface function", "function"));
 var array;
 array = ['index 1', 'index2'];
 alert("interface array " + array[1]);
+var Clock = /** @class */ (function () {
+    function Clock(h, m) {
+        this.h = h;
+    }
+    Clock.prototype.setTime = function (date) {
+        this.currentTime = date;
+    };
+    return Clock;
+}());
+var square = {};
+square.color = 'Blue';
+square.penWidth = 5.0;
+square.sideLength = 10;
+alert("".concat(square.color, " ").concat(square.penWidth, " ").concat(square.sideLength));
