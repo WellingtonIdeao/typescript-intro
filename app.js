@@ -81,6 +81,9 @@ function printLabelInterface(labelledObj) {
 }
 var myObj = { label: "label with interface" };
 printLabelInterface(myObj);
+var myObj2 = {};
+myObj2.label = "label with interface object";
+printLabelInterface(myObj2);
 var mySearch;
 mySearch = function (src, sub) {
     var result = src.search(sub);

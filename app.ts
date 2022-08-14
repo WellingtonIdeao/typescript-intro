@@ -106,6 +106,10 @@ function printLabelInterface(labelledObj: LabelledValue){
 var myObj = {label: "label with interface"};
 printLabelInterface(myObj);
 
+var myObj2 = <LabelledValue>{};
+myObj2.label = "label with interface object";
+printLabelInterface(myObj2);
+
 // interface function type
 
 interface SearchConf{
