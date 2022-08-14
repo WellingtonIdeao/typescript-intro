@@ -71,3 +71,13 @@ var result6 = function (x, y, z) {
 };
 // step 3
 var result6 = function (x, y, z) { return x + y + z; };
+function printLabel(labelledObj) {
+    alert(labelledObj.label);
+}
+var myObj = { label: "label" };
+printLabel(myObj);
+function printLabelInterface(labelledObj) {
+    alert(labelledObj.label);
+}
+var myObj = { label: "label with interface" };
+printLabelInterface(myObj);

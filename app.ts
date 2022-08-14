@@ -86,3 +86,22 @@ var result6 = (x: number, y: number, z: number) => {
 
 // step 3
 var result6 = (x: number, y: number, z: number) => x+y+z;
+
+// interface
+
+interface LabelledValue{
+    label: string;
+    size?: number;
+}
+function printLabel(labelledObj: {label: string}){
+    alert(labelledObj.label);
+}
+
+var myObj = {label: "label"};
+
+printLabel(myObj);
+function printLabelInterface(labelledObj: LabelledValue){
+    alert(labelledObj.label);
+}
+var myObj = {label: "label with interface"};
+printLabelInterface(myObj);
