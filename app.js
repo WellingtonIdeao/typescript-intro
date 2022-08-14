@@ -9,3 +9,6 @@ var Produto = /** @class */ (function () {
     };
     return Produto;
 }());
+function addNumbers(x, y) {
+    return x + y;
+}

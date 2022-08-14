@@ -13,3 +13,7 @@ class Produto {
         return `Produto ${this.codigo}: ${this.descricao} - R$ ${this.preco}`;
     }
 }
+
+function addNumbers(x:number, y:number): number{
+    return x+y;
+}
