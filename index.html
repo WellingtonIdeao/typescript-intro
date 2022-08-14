@@ -13,6 +13,21 @@
            </script> 
     </head>
     <body>
-        <div id="content"></div>
+        <div id="content">
+            <h1></h1>
+            <h2></h2>
+            <h3></h3>
+        </div>
+        <script>
+            let result = addNumbersOptionals(1,2,3);
+            let result2 = addNumbersDefault(1,2);
+            let result3 = addSetOptionalsRest(1, 2, 3, 4);
+            const h1 = document.querySelector('h1');
+            const h2 = document.querySelector('h2');
+            const h3 = document.querySelector('h3');
+            h1.textContent = result;
+            h2.textContent = result2;
+            h3.textContent = result3;
+        </script>
     </body>
 </html>
