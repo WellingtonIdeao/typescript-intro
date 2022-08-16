@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var Produto = /** @class */ (function () {
     function Produto(_codigo, _descricao, _preco) {
         this.codigo = _codigo;
@@ -112,6 +127,7 @@ square.color = 'Blue';
 square.penWidth = 5.0;
 square.sideLength = 10;
 alert("".concat(square.color, " ").concat(square.penWidth, " ").concat(square.sideLength));
+// class
 var Hello = /** @class */ (function () {
     function Hello(text) {
         this.text = text;
@@ -142,3 +158,32 @@ alert(hello.message());
 alert(area.circle(2));
 alert(area.rectangle(5, 4));
 alert(area.square(6));
+// class inheritance
+var Product = /** @class */ (function () {
+    function Product(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    Product.prototype.priceWithDescount = function (descount) {
+        var pricefinal = this.price - (this.price * descount);
+        alert(this.name + ': $ ' + pricefinal);
+    };
+    return Product;
+}());
+var Tv = /** @class */ (function (_super) {
+    __extends(Tv, _super);
+    function Tv(name, price, size) {
+        var _this = _super.call(this, name, price) || this;
+        _this.size = size;
+        return _this;
+    }
+    Tv.prototype.priceWithDescount = function (descount) {
+        alert('Tv size: ' + this.size + ' pol');
+        _super.prototype.priceWithDescount.call(this, descount);
+    };
+    return Tv;
+}(Product));
+var product = new Product('Table', 10.00);
+var tv = new Tv('Tv samsung', 20.00, 20);
+product.priceWithDescount(0.10);
+tv.priceWithDescount(0.10);

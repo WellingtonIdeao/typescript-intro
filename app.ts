@@ -177,7 +177,7 @@ square.sideLength = 10;
 
 alert(`${square.color} ${square.penWidth} ${square.sideLength}`);
 
-
+// class
 class Hello{
     text: string;
 
@@ -215,6 +215,43 @@ alert(hello.message());
 alert(area.circle(2));
 alert(area.rectangle(5, 4));
 alert(area.square(6));
+
+// class inheritance
+
+class Product {
+    name: string;
+    price: number;
+
+    constructor(name: string, price: number){
+        this.name = name;
+        this.price = price;
+    }
+
+    priceWithDescount(descount: number): void {
+        let pricefinal: number = this.price - (this.price * descount); 
+        alert(this.name + ': $ ' + pricefinal);
+    }
+}
+
+class Tv extends Product {
+    size: number;
+
+    constructor(name: string, price: number, size: number){
+        super(name, price);
+        this.size = size;
+    }
+
+    priceWithDescount(descount: number): void {
+        alert('Tv size: ' + this.size + ' pol')
+        super.priceWithDescount(descount);
+    }
+
+}
+
+let product = new Product('Table', 10.00);
+let tv = new Tv('Tv samsung', 20.00, 20);
+product.priceWithDescount(0.10);
+tv.priceWithDescount(0.10);
 
 
 
