@@ -187,3 +187,28 @@ var product = new Product('Table', 10.00);
 var tv = new Tv('Tv samsung', 20.00, 20);
 product.priceWithDescount(0.10);
 tv.priceWithDescount(0.10);
+// Access Modifiers and get/set acessors
+var Person = /** @class */ (function () {
+    function Person() {
+    }
+    Object.defineProperty(Person.prototype, "name", {
+        get: function () {
+            return this.namePerson;
+        },
+        set: function (value) {
+            this.namePerson = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Person;
+}());
+var Main = /** @class */ (function () {
+    function Main() {
+        this.person = new Person();
+        this.person.name = 'person name';
+        alert(this.person.name);
+    }
+    return Main;
+}());
+var main = new Main();

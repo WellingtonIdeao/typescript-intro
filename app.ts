@@ -227,7 +227,7 @@ class Product {
         this.price = price;
     }
 
-    priceWithDescount(descount: number): void {
+    public priceWithDescount(descount: number): void {
         let pricefinal: number = this.price - (this.price * descount); 
         alert(this.name + ': $ ' + pricefinal);
     }
@@ -253,6 +253,32 @@ let tv = new Tv('Tv samsung', 20.00, 20);
 product.priceWithDescount(0.10);
 tv.priceWithDescount(0.10);
 
+// Access Modifiers and get/set acessors tsc -t es5 file.ts
 
+class Person{
+    private namePerson: string;
+
+    public get name(): string{
+        return this.namePerson;
+    }
+
+    public set name(value: string){
+        this.namePerson = value;
+    }
+}
+
+class Main{
+    private person: Person;
+
+    constructor(){
+        this.person = new Person();
+
+        this.person.name = 'person name';
+        alert(this.person.name);
+    }    
+
+}
+
+ let main = new Main();
 
 
