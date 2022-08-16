@@ -178,5 +178,44 @@ square.sideLength = 10;
 alert(`${square.color} ${square.penWidth} ${square.sideLength}`);
 
 
+class Hello{
+    text: string;
+
+    constructor(text: string){
+        this.text = text;
+    }
+
+    message(): string{
+        return 'Hello '+this.text;
+    }
+}
+
+class Area{
+    pi: number;
+    constructor(){
+        this.pi = 3.1415;
+    }
+
+    circle(radius: number): number{
+        return this.pi * radius * radius;
+    }
+
+    rectangle(height: number, width: number): number{
+        return  height * width;
+    }
+    square(side: number): number {
+        return side * side;
+    }
+
+}
+
+let hello = new Hello('World');
+let area = new Area();
+alert(hello.message());
+alert(area.circle(2));
+alert(area.rectangle(5, 4));
+alert(area.square(6));
+
+
 
 

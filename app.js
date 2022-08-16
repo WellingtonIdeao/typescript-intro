@@ -112,3 +112,33 @@ square.color = 'Blue';
 square.penWidth = 5.0;
 square.sideLength = 10;
 alert("".concat(square.color, " ").concat(square.penWidth, " ").concat(square.sideLength));
+var Hello = /** @class */ (function () {
+    function Hello(text) {
+        this.text = text;
+    }
+    Hello.prototype.message = function () {
+        return 'Hello ' + this.text;
+    };
+    return Hello;
+}());
+var Area = /** @class */ (function () {
+    function Area() {
+        this.pi = 3.1415;
+    }
+    Area.prototype.circle = function (radius) {
+        return this.pi * radius * radius;
+    };
+    Area.prototype.rectangle = function (height, width) {
+        return height * width;
+    };
+    Area.prototype.square = function (side) {
+        return side * side;
+    };
+    return Area;
+}());
+var hello = new Hello('World');
+var area = new Area();
+alert(hello.message());
+alert(area.circle(2));
+alert(area.rectangle(5, 4));
+alert(area.square(6));
